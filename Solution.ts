@@ -28,8 +28,8 @@ function findMaxPossibleMovesFromStart(matrix: number[][], distanceFromStart: nu
         const nextColumn = column + move[1];
 
         if (isInMatrix(nextRow, nextColumn)
-            && matrix[row][column] < matrix[nextRow][nextColumn]
-            && this.visitedByMovesFromStart[nextRow][nextColumn] < distanceFromStart + 1) {
+                && matrix[row][column] < matrix[nextRow][nextColumn]
+                && this.visitedByMovesFromStart[nextRow][nextColumn] < distanceFromStart + 1) {
 
             this.visitedByMovesFromStart[nextRow][nextColumn] = distanceFromStart + 1;
             findMaxPossibleMovesFromStart(matrix, distanceFromStart + 1, nextRow, nextColumn);
