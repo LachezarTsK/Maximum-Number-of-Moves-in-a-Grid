@@ -59,8 +59,8 @@ private:
             size_t nextColumn = column + move[1];
 
             if (isInMatrix(nextRow, nextColumn)
-                && matrix[row][column] < matrix[nextRow][nextColumn]
-                && visitedByMovesFromStart[nextRow][nextColumn] < distanceFromStart + 1) {
+                    && matrix[row][column] < matrix[nextRow][nextColumn]
+                    && visitedByMovesFromStart[nextRow][nextColumn] < distanceFromStart + 1) {
 
                 visitedByMovesFromStart[nextRow][nextColumn] = distanceFromStart + 1;
                 findMaxPossibleMovesFromStart(matrix, distanceFromStart + 1, nextRow, nextColumn);
